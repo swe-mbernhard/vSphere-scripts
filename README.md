@@ -10,7 +10,7 @@ Tested on vSphere 6.7 with ESXi hosts 6.7.
 
 # Usage
 
-Run the powershell script - script will check for, and install the following ps1 modules: 
+Run the powershell script - **script will check for, and install the following ps1 modules:** 
 
 PSIni
 

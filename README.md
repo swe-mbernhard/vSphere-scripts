@@ -27,4 +27,4 @@ Following switches are available:
 
 /switch \<vswitchname\> Specify vSwitch name 
  
- /vcenterserver \<vcenterserverfqdn\> Specify vcenter server
+ /vcenterserver \<vcenterserverfqdn\> Specify vcenter server FQDN or IP address

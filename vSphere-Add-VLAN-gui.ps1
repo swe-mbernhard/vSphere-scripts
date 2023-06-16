@@ -105,28 +105,28 @@ $logo = [System.Drawing.Image]::FromStream($ms, $true)
 
 ## Add vlan form
 
-$LocalVLANForm					= New-Object system.Windows.Forms.Form
-$LocalVLANForm.ClientSize		= '480,800'
-$LocalVLANForm.text				= "Add ESXi VLANs v$version"
-$LocalVLANForm.BackColor		= "#ffffff"
-$LocalVLANForm.TopMost			= $false
+$LocalVLANForm			= New-Object system.Windows.Forms.Form
+$LocalVLANForm.ClientSize	= '480,800'
+$LocalVLANForm.text		= "Add ESXi VLANs v$version"
+$LocalVLANForm.BackColor	= "#ffffff"
+$LocalVLANForm.TopMost		= $false
 $LocalVLANForm.FormBorderStyle	= 'Fixed3D'
 
-$Titel							= New-Object system.Windows.Forms.Label
-$Titel.text						= "Add VLAN to ESXi"
-$Titel.AutoSize					= $true
-$Titel.width					= 25
-$Titel.height					= 10
-$Titel.location					= New-Object System.Drawing.Point(20,20)
-$Titel.Font						= 'Microsoft Sans Serif,13'
+$Titel				= New-Object system.Windows.Forms.Label
+$Titel.text			= "Add VLAN to ESXi"
+$Titel.AutoSize			= $true
+$Titel.width			= 25
+$Titel.height			= 10
+$Titel.location			= New-Object System.Drawing.Point(20,20)
+$Titel.Font			= 'Microsoft Sans Serif,13'
 
-$Description					= New-Object system.Windows.Forms.Label
-$Description.text				= "Add VLAN to hosts in $vCenterServer cluster."
-$Description.AutoSize			= $false
-$Description.width				= 400
-$Description.height				= 30
-$Description.location			= New-Object System.Drawing.Point(20,50)
-$Description.Font				= 'Microsoft Sans Serif,10'
+$Description			= New-Object system.Windows.Forms.Label
+$Description.text		= "Add VLAN to hosts in $vCenterServer cluster."
+$Description.AutoSize		= $false
+$Description.width		= 400
+$Description.height		= 30
+$Description.location		= New-Object System.Drawing.Point(20,50)
+$Description.Font		= 'Microsoft Sans Serif,10'
 
 $VLANNameLabel                	= New-Object system.Windows.Forms.Label
 $VLANNameLabel.text           	= "VLAN Name:"
@@ -155,15 +155,15 @@ $vcenterLabel.location       	= New-Object System.Drawing.Point(20,80)
 $vcenterLabel.Font           	= 'Microsoft Sans Serif,10,style=Bold'
 $vcenterLabel.Visible        	= $true
 
-$vcenterName					= New-Object system.Windows.Forms.TextBox
-$vcenterName.multiline			= $false
-$vcenterName.text				= $vCenterServer
-$vcenterName.width				= 200
-$vcenterName.height				= 40
-$vcenterName.location			= New-Object System.Drawing.Point(20,100)
-$vcenterName.Font				= 'Microsoft Sans Serif,10'
-$vcenterName.Visible			= $true
-$vcenterName.TabIndex 			= 3
+$vcenterName			= New-Object system.Windows.Forms.TextBox
+$vcenterName.multiline		= $false
+$vcenterName.text		= $vCenterServer
+$vcenterName.width		= 200
+$vcenterName.height		= 40
+$vcenterName.location		= New-Object System.Drawing.Point(20,100)
+$vcenterName.Font		= 'Microsoft Sans Serif,10'
+$vcenterName.Visible		= $true
+$vcenterName.TabIndex 		= 3
 
 $vcuserLabel                	= New-Object system.Windows.Forms.Label
 $vcuserLabel.text           	= "vCenter Username (optional):"
@@ -195,13 +195,13 @@ $vcpassLabel.Visible        	= $true
 
 $vcpass                     	= New-Object system.Windows.Forms.TextBox
 $vcpass.multiline           	= $false
-$vcpass.PasswordChar 			= '*'
+$vcpass.PasswordChar 		= '*'
 $vcpass.width               	= 200
 $vcpass.height              	= 40
 $vcpass.location            	= New-Object System.Drawing.Point(240,150)
 $vcpass.Font                	= 'Microsoft Sans Serif,10'
 $vcpass.Visible             	= $true
-$vcpass.TabIndex 				= 6
+$vcpass.TabIndex 		= 6
 
 
 $VLANIDLabel                	= New-Object system.Windows.Forms.Label
@@ -220,7 +220,7 @@ $VLANIDName.height              = 40
 $VLANIDName.location            = New-Object System.Drawing.Point(20,250)
 $VLANIDName.Font                = 'Microsoft Sans Serif,10'
 $VLANIDName.Visible             = $true
-$VLANIDName.TabIndex 			= 2
+$VLANIDName.TabIndex 		= 2
 
 $vswitchLabel                	= New-Object system.Windows.Forms.Label
 $vswitchLabel.text           	= "Existing vSwitch name:"
@@ -238,23 +238,23 @@ $vswitchName.height             = 40
 $vswitchName.location           = New-Object System.Drawing.Point(20,150)
 $vswitchName.Font               = 'Microsoft Sans Serif,10'
 $vswitchName.Visible            = $true
-$vswitchName.text				= $switch
-$vswitchName.TabIndex 			= 4
+$vswitchName.text		= $switch
+$vswitchName.TabIndex 		= 4
 
-$dryrunchkboxlabel				= New-Object system.Windows.Forms.Label
-$dryrunchkboxlabel.AutoSize		= $true
-$dryrunchkboxlabel.width		= 25
-$dryrunchkboxlabel.height		= 20
-$dryrunchkboxlabel.text			= "Dry-run - try but do not change."
-$dryrunchkboxlabel.location		= New-Object System.Drawing.Point(240,180)
-$dryrunchkboxlabel.Font			= 'Microsoft Sans Serif,10,style=Bold'
-$dryrunchkboxlabel.Visible		= $true
+$dryrunchkboxlabel		= New-Object system.Windows.Forms.Label
+$dryrunchkboxlabel.AutoSize	= $true
+$dryrunchkboxlabel.width	= 25
+$dryrunchkboxlabel.height	= 20
+$dryrunchkboxlabel.text		= "Dry-run - try but do not change."
+$dryrunchkboxlabel.location	= New-Object System.Drawing.Point(240,180)
+$dryrunchkboxlabel.Font		= 'Microsoft Sans Serif,10,style=Bold'
+$dryrunchkboxlabel.Visible	= $true
 
 $dryrunchkbox                	= New-Object system.Windows.Forms.Checkbox
 $dryrunchkbox.location       	= New-Object System.Drawing.Point(240,200)
 $dryrunchkbox.Visible       	= $true
-$dryrunchkbox.Checked 		 	= $false 
-$dryrunchkbox.TabIndex 			= 7
+$dryrunchkbox.Checked 		 = $false 
+$dryrunchkbox.TabIndex 		= 7
 
 $StatusLabel                	= New-Object system.Windows.Forms.Label
 $StatusLabel.text           	= "Status:"
@@ -267,7 +267,7 @@ $StatusLabel.Visible        	= $true
 
 $addStatus                   	= New-Object system.Windows.Forms.RichTextBox
 $addStatus.multiline         	= $true
-$addStatus.Scrollbars 		 	= "Both"
+$addStatus.Scrollbars 		 = "Both"
 $addStatus.AutoSize          	= $true
 $addStatus.width             	= 440
 $addStatus.height            	= 380
@@ -292,51 +292,51 @@ $AddVLANBtn.location          	= New-Object System.Drawing.Point(120,290)
 $AddVLANBtn.Font              	= 'Microsoft Sans Serif,10'
 $AddVLANBtn.ForeColor         	= "#ffffff"
 $AddVLANBtn.Visible           	= $true
-$AddVLANBtn.TabIndex 			= 9
+$AddVLANBtn.TabIndex 		= 9
 
-$cancelBtn						= New-Object system.Windows.Forms.Button
-$cancelBtn.BackColor			= "#ffffff"
-$cancelBtn.text					= "Cancel"
-$cancelBtn.width				= 90
-$cancelBtn.height				= 30
-$cancelBtn.location				= New-Object System.Drawing.Point(260,290)
-$cancelBtn.Font					= 'Microsoft Sans Serif,10'
-$cancelBtn.ForeColor			= "#000"
-$cancelBtn.DialogResult			= [System.Windows.Forms.DialogResult]::Cancel
+$cancelBtn			= New-Object system.Windows.Forms.Button
+$cancelBtn.BackColor		= "#ffffff"
+$cancelBtn.text			= "Cancel"
+$cancelBtn.width		= 90
+$cancelBtn.height		= 30
+$cancelBtn.location		= New-Object System.Drawing.Point(260,290)
+$cancelBtn.Font			= 'Microsoft Sans Serif,10'
+$cancelBtn.ForeColor		= "#000"
+$cancelBtn.DialogResult		= [System.Windows.Forms.DialogResult]::Cancel
 
-$ClearButton = New-Object System.Windows.Forms.Button;
-$ClearButton.Location = New-Object System.Drawing.Point(20,290)
-$ClearButton.width				= 90
-$ClearButton.height				= 30
+$ClearButton 			= New-Object System.Windows.Forms.Button;
+$ClearButton.Location 		= New-Object System.Drawing.Point(20,290)
+$ClearButton.width		= 90
+$ClearButton.height		= 30
 $ClearButton.Font               = 'Microsoft Sans Serif,10'
 $ClearButton.Visible            = $true
 $ClearButton.Text               = "Clear status"
-$ClearButton.TabIndex 			= 8
+$ClearButton.TabIndex 		= 8
 $ClearButton.Add_Click{$addStatus.Clear()}
 
 
-$QuitButton = New-Object System.Windows.Forms.Button;
-$QuitButton.Location = New-Object System.Drawing.Point(370,290)
-$QuitButton.width				= 90
-$QuitButton.height				= 30
+$QuitButton 			= New-Object System.Windows.Forms.Button;
+$QuitButton.Location		= New-Object System.Drawing.Point(370,290)
+$QuitButton.width		= 90
+$QuitButton.height		= 30
 $QuitButton.Font               	= 'Microsoft Sans Serif,10'
 $QuitButton.Visible            	= $true
 $QuitButton.BackColor         	= "#FF7676"
 $QuitButton.Text               	= "Exit"
-$QuitButton.TabIndex 			= 11
-$QuitButton.DialogResult		= [System.Windows.Forms.DialogResult]::Cancel
+$QuitButton.TabIndex 		= 11
+$QuitButton.DialogResult	= [System.Windows.Forms.DialogResult]::Cancel
 
-$HelpButton = New-Object System.Windows.Forms.Button;
-$HelpButton.Location = New-Object System.Drawing.Point(220,290)
-$HelpButton.width				= 90
-$HelpButton.height				= 30
+$HelpButton 			= New-Object System.Windows.Forms.Button;
+$HelpButton.Location 		= New-Object System.Drawing.Point(220,290)
+$HelpButton.width		= 90
+$HelpButton.height		= 30
 $HelpButton.Font               	= 'Microsoft Sans Serif,10'
 $HelpButton.Visible            	= $true
 $HelpButton.Text               	= "Help"
-$HelpButton.TabIndex 			= 10
+$HelpButton.TabIndex 		= 10
 
 
-$LocalVLANForm.CancelButton   = $QuitButton
+$LocalVLANForm.CancelButton   	= $QuitButton
 $LocalVLANForm.controls.AddRange(@($Titel,$Description,$FormImg,$VLANName,$vswitchName,$vswitchLabel,$VLANNameLabel,$VLANIDName,$StatusLabel,$dryrunchkboxlabel,$vcuserName, $dryrunchkbox, $vcuserlabel,$vcpass,$vcpasslabel, $VLANIDLabel,$ClearButton,$vcenterLabel,$vcentername,$addStatus,$AddVLANBtn,$QuitButton,$HelpButton))
 $LocalVLANForm.add_Shown({CheckPowerCLI })
 $LocalVLANForm.add_Shown({CheckPSini })
@@ -350,7 +350,7 @@ $HelpForm.text               	= "Help v$version"
 $HelpForm.BackColor          	= "#ffffff"
 $HelpForm.TopMost            	= $false
 $HelpForm.Visible            	= $false
-$HelpForm.FormBorderStyle 		= 'Fixed3D'
+$HelpForm.FormBorderStyle 	= 'Fixed3D'
 
 $HelpName                    	= New-Object system.Windows.Forms.RichTextBox
 $HelpName.multiline           	= $true
@@ -358,30 +358,30 @@ $HelpName.width               	= 470
 $HelpName.height              	= 270
 $HelpName.location            	= New-Object System.Drawing.Point(5,5)
 $HelpName.Font                	= 'Microsoft Sans Serif,8'
-$HelpName.Visible			  	= $true
-$HelpName.ReadOnly		      	= $true
-$HelpName.Text				  	= "Add VLANs to all ESXi`r`n`r`n"
-$HelpName.Text 					+=   "Enter a VLAN name and number (VLAN ID) to add to default vCenter servers.`r`n`r`n";
-$HelpName.Text 					+=   "Enter another vCenter server if you want to connect to another system than $vCenterServer.`r`n`r`n";
-$HelpName.Text 					+=   "vSwitch option must be set to an existing vSwitch with the same name on all hosts. Default $switch`r`n`r`n";
-$HelpName.Text 					+=   "If no username or password is provided, the application runs as the user your are logged in as.`r`n`r`n";
-$HelpName.Text 					+=   "The form checks input data for sanity.`r`n`r`n";
-$HelpName.Text 					+=   "Use Dry-run if you want to check for sanity and already added VLANs`r`n`r`n";
-$HelpName.Text 					+=   "Default vswitch and vcenter can be set by variables in addvlan.ini file.`r`n`r`n";
-$HelpName.Text 					+=   "The running version is $version.`r`n";
+$HelpName.Visible		= $true
+$HelpName.ReadOnly		= $true
+$HelpName.Text			= "Add VLANs to all ESXi`r`n`r`n"
+$HelpName.Text 			+=   "Enter a VLAN name and number (VLAN ID) to add to default vCenter servers.`r`n`r`n";
+$HelpName.Text 			+=   "Enter another vCenter server if you want to connect to another system than $vCenterServer.`r`n`r`n";
+$HelpName.Text 			+=   "vSwitch option must be set to an existing vSwitch with the same name on all hosts. Default $switch`r`n`r`n";
+$HelpName.Text 			+=   "If no username or password is provided, the application runs as the user your are logged in as.`r`n`r`n";
+$HelpName.Text 			+=   "The form checks input data for sanity.`r`n`r`n";
+$HelpName.Text 			+=   "Use Dry-run if you want to check for sanity and already added VLANs`r`n`r`n";
+$HelpName.Text 			+=   "Default vswitch and vcenter can be set by variables in addvlan.ini file.`r`n`r`n";
+$HelpName.Text 			+=   "The running version is $version.`r`n";
 
 
 $QuitButton = New-Object System.Windows.Forms.Button;
 $QuitButton.Location = New-Object System.Drawing.Point(385,285)
-$QuitButton.width				= 90
-$QuitButton.height				= 30
+$QuitButton.width		= 90
+$QuitButton.height		= 30
 $QuitButton.Font               	= 'Microsoft Sans Serif,10'
 $QuitButton.Visible            	= $true
 $QuitButton.BackColor         	= "#FF7676"
 $QuitButton.Text               	= "Exit"
-$QuitButton.DialogResult		= [System.Windows.Forms.DialogResult]::Cancel
+$QuitButton.DialogResult	= [System.Windows.Forms.DialogResult]::Cancel
 
-$HelpForm.CancelButton   		= $QuitButton
+$HelpForm.CancelButton   	= $QuitButton
 
 $HelpButton.Add_Click({ [void]$HelpForm.ShowDialog() })
 

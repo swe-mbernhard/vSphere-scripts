@@ -12,20 +12,11 @@ Add-Type -AssemblyName System.Drawing
 #######################
 ## Script to add VLAN to all ESXi servers. 
 #######################
-## Version 0.9
-### First release
-## Version 0.91
-### Corrected error handling
-## Version 0.915
-### Adding Help
-## Version 0.916
-### Adding checks and variable for vswitch name
-## Version 0.918
-### Adding ini file function and prep for exe, include logo as base64
+
 
 
 #---------------------------------------------------------[Variables]--------------------------------------------------------
-$version = "0.918"
+$version = "1.0"
 
 
 #---------------------------------------------------------[Read ini]--------------------------------------------------------

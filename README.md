@@ -25,6 +25,6 @@ Following switches are available:
 
 /debug - Extensive output
 
-/switch <vswitchname> Specify vSwitch name 
+/switch \<vswitchname\> Specify vSwitch name 
  
- /vcenterserver <vcenterserverfqdn> Specify vcenter server
+ /vcenterserver \<vcenterserverfqdn\> Specify vcenter server

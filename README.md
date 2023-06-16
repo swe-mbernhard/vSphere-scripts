@@ -13,6 +13,7 @@ Tested on vSphere 6.7 with ESXi hosts 6.7.
 Run the powershell script - will check for, and install the following ps1 modules: 
 
 PSIni
+
 VMware.PowerCLI
 
 NuGet

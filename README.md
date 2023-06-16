@@ -23,11 +23,11 @@ NuGet
 
 Following switches are available:
 
-/debug - Extensive output
+-debug - Extensive output
 
-/switch \<vswitchname\> Specify vSwitch name 
+-switch \<vswitchname\> Specify vSwitch name 
  
- /vcenterserver \<vcenterserverfqdn\> Specify vcenter server FQDN or IP address
+ -vcenterserver \<vcenterserverfqdn\> Specify vcenter server FQDN or IP address
  
  # Disclaimer
  

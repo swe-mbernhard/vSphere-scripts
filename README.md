@@ -28,3 +28,9 @@ Following switches are available:
 /switch \<vswitchname\> Specify vSwitch name 
  
  /vcenterserver \<vcenterserverfqdn\> Specify vcenter server FQDN or IP address
+ 
+ # Disclaimer
+ 
+ Use at your own risk, please evaluate and understand the code before running it. 
+ 
+ With that said, I use it in a production environment. 
